@@ -2,24 +2,20 @@
   "name": "v-pattern-input",
   "version": "2.1.4",
   "description": "A Vuetify Component for limiting user input",
-  "main": "src/components/v-pattern-input.vue",
+  "main": "nuxt/module.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RoamIn/vue-pattern-input.git"
+    "url": "git+https://github.com/jonasrothmann/v-pattern-input.git"
   },
   "keywords": [
     "vue",
+    "vuetify",
+    "nuxt",
     "input",
     "pattern",
     "RegExp"
   ],
-  "author": "Live",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/RoamIn/vue-pattern-input/issues"
-  },
-  "homepage": "https://github.com/RoamIn/vue-pattern-input#readme",
-  "dependencies": {
+  "peerDependencies": {
     "vue": "^2.4.0"
   }
 }
