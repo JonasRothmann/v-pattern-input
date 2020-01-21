@@ -1,8 +1,8 @@
 {
-  "name": "vue-pattern-input",
+  "name": "v-pattern-input",
   "version": "2.1.4",
-  "description": "A Vue2.0 Component for limiting user input",
-  "main": "src/components/vue-pattern-input.vue",
+  "description": "A Vuetify Component for limiting user input",
+  "main": "src/components/v-pattern-input.vue",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RoamIn/vue-pattern-input.git"
