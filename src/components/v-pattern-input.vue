@@ -1,12 +1,16 @@
 <template>
-  <input v-on="listeners"
-         v-model="val"
-         ref="input">
+  <component
+    :is="component"
+    ref="input"
+    v-model="val"
+    v-bind="$attrs"
+    v-on="listeners"
+  />
 </template>
 
 <script type="text/ecmascript-6">
 export default {
-  name: 'vue-pattern-input',
+  name: 'VPatternInput',
   props: {
     value: {
       required: true,
@@ -21,6 +25,10 @@ export default {
     replacement: {
       type: String,
       default: ''
+    },
+    component: {
+      type: [String, Object],
+      default: 'input'
     }
   },
   data () {
@@ -39,10 +47,21 @@ export default {
       })
 
       listeners.input = (e) => {
-        this.updateValue(e.target.value)
+        this.updateValue(e)
       }
 
       return listeners
+    }
+  },
+  watch: {
+    // watch value prop
+    value: {
+      handler (val) {
+        if (val !== this.val) {
+          this.updateValue(val)
+        }
+      },
+      immediate: true
     }
   },
   methods: {
@@ -63,18 +82,9 @@ export default {
 
     // emit input event
     emitInput (val) {
-      this.$emit('input', val)
-    }
-  },
-  watch: {
-    // watch value prop
-    value: {
-      handler (val) {
-        if (val !== this.val) {
-          this.updateValue(val)
-        }
-      },
-      immediate: true
+      if (this.$refs.input !== undefined) {
+        this.$refs.input.lazyValue = val
+      }
     }
   }
 }
