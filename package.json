@@ -2,7 +2,7 @@
   "name": "v-pattern-input",
   "version": "2.1.4",
   "description": "A Vuetify Component for limiting user input",
-  "main": "nuxt/module.js",
+  "main": "module.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jonasrothmann/v-pattern-input.git"
