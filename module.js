@@ -7,4 +7,4 @@ export default function(moduleOptions) {
   })
 }
 
-module.exports.meta = require('../package.json')
+module.exports.meta = require('./package.json')
